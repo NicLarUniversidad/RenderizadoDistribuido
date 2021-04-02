@@ -3,13 +3,15 @@ package com.unlu.sdypp.renderizado.fachada.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unlu.sdypp.renderizado.fachada.converters.ObjectToJsonConverter;
 
+import java.util.Date;
+
 public class ImageJobModel {
 
     @JsonProperty("file_name")
     private String fileName;
 
     @JsonProperty("creation_date")
-    private String creationDate;
+    private Date creationDate;
 
     @JsonProperty("data_base_reference")
     private String dataBaseReference;
@@ -22,11 +24,11 @@ public class ImageJobModel {
         this.fileName = fileName;
     }
 
-    public String getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(String creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
