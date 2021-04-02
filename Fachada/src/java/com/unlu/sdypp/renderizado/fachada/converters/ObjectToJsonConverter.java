@@ -9,7 +9,7 @@ public class ObjectToJsonConverter {
 
     public static ObjectToJsonConverter instance;
 
-    private Gson gson;
+    private final Gson gson;
 
     @Autowired
     public ObjectToJsonConverter(){
@@ -18,6 +18,6 @@ public class ObjectToJsonConverter {
     }
 
     public String toJson(Object object) {
-        return  this.gson.toJson(object);
+        return this.gson.toJson(object);
     }
 }
