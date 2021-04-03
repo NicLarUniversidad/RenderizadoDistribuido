@@ -24,3 +24,4 @@ hs_err_pid*
 .idea
 Fachada/test/unit/resources/application.properties
 FileServer/test/unit/resources/application.properties
+FileServer/target/test-classes/application.properties

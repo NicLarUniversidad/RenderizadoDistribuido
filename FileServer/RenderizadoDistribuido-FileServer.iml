@@ -4,6 +4,10 @@
     <facet type="web" name="Web">
       <configuration>
         <webroots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/java" />
+          <root url="file://$MODULE_DIR$/src/resources" />
+        </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
@@ -93,10 +97,10 @@
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-amqp:2.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.2.9.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: dev.morphia.morphia:core:1.5.8" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:3.10.1" level="project" />
+    <orderEntry type="library" name="Maven: dev.morphia.morphia:core:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-legacy:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.proxytoys:proxytoys:1.0" level="project" />
-    <orderEntry type="library" name="Maven: io.github.classgraph:classgraph:4.8.47" level="project" />
+    <orderEntry type="library" name="Maven: io.github.classgraph:classgraph:4.8.78" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.amqp:spring-rabbit:2.2.12.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.amqp:spring-amqp:2.2.12.RELEASE" level="project" />
