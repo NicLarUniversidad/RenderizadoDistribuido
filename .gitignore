@@ -28,3 +28,4 @@ FileServer/target/test-classes/application.properties
 FileServer/test/integration/resources/application.properties
 FileServer/target/classes/application.properties
 FileServer/target/classes/application.properties
+LoadBalancer/src/test/resources/application.properties
