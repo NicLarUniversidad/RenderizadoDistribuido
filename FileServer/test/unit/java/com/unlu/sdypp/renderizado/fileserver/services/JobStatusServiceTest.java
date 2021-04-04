@@ -1,8 +1,9 @@
-package com.unlu.sdypp.renderizado.fileserver.entities.datastores;
+package com.unlu.sdypp.renderizado.fileserver.services;
 
 import com.unlu.sdypp.renderizado.fileserver.IntegrationTest;
 import com.unlu.sdypp.renderizado.fileserver.entities.FileEntity;
-import com.unlu.sdypp.renderizado.fileserver.repositories.FileRepository;
+import com.unlu.sdypp.renderizado.fileserver.entities.JobStatusEntity;
+import com.unlu.sdypp.renderizado.fileserver.repositories.JobStatusRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,19 +11,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class FileDatastoreTest extends IntegrationTest {
+public class JobStatusServiceTest extends IntegrationTest {
 
     @Autowired
-    private FileRepository repository;
+    private JobStatusRepository repository;
 
-    private FileEntity entity;
+    private JobStatusEntity entity;
 
     @Before
     public void before() {
-        entity = new FileEntity();
-        entity.setFileName("test.txt");
-        entity.setContent("test");
-        entity.setFrames(1);
+        entity = new JobStatusEntity();
+        entity.setOriginalFileReference("test.txt");
+        entity.setRenderedFileReference("rendered.txt");
     }
 
     @After
@@ -58,7 +58,7 @@ public class FileDatastoreTest extends IntegrationTest {
     @Test
     public void findByNameTest() {
         repository.save(entity);
-        var list = repository.findByFileName(entity.getFileName());
+        var list = repository.findByOriginalFileReference(entity.getOriginalFileReference());
         assertThat(list.size()).isEqualTo(1);
     }
 }
