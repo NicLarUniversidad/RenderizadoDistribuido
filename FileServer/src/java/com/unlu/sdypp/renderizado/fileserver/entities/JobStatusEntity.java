@@ -1,6 +1,5 @@
 package com.unlu.sdypp.renderizado.fileserver.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unlu.sdypp.renderizado.fileserver.converters.ObjectToJsonConverter;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
