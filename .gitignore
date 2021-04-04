@@ -25,3 +25,5 @@ hs_err_pid*
 Fachada/test/unit/resources/application.properties
 FileServer/test/unit/resources/application.properties
 FileServer/target/test-classes/application.properties
+FileServer/test/integration/resources/application.properties
+FileServer/target/classes/application.properties
