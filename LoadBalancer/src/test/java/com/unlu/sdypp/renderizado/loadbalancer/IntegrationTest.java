@@ -1,4 +1,4 @@
-package com.unlu.sdypp.renderizado.fileserver;
+package com.unlu.sdypp.renderizado.loadbalancer;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
