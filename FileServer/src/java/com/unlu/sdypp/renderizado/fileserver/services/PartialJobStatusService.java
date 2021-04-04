@@ -16,7 +16,7 @@ public class PartialJobStatusService {
         this.repository = repository;
     }
 
-    public PartialJobStatusEntity save(PartialJobStatusEntity entity) {
+    synchronized public PartialJobStatusEntity save(PartialJobStatusEntity entity) {
         return repository.save(entity);
     }
 
