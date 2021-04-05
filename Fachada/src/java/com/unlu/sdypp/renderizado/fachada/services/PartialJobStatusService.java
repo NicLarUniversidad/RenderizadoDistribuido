@@ -1,6 +1,6 @@
 package com.unlu.sdypp.renderizado.fachada.services;
 
-import com.unlu.sdypp.renderizado.fachada.models.PartialJobEntity;
+import com.unlu.sdypp.renderizado.fachada.models.PartialJobStatusEntity;
 import com.unlu.sdypp.renderizado.fachada.repositories.PartialJobStatusRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +16,15 @@ public class PartialJobStatusService {
         this.repository = repository;
     }
 
-    public List<PartialJobEntity> findByReference(String reference) {
+    public List<PartialJobStatusEntity> findByReference(String reference) {
         return repository.getFilesByReference(reference);
     }
 
-    public PartialJobEntity save(PartialJobEntity entity) {
+    public PartialJobStatusEntity save(PartialJobStatusEntity entity) {
         return repository.save(entity);
     }
 
-    public void delete (PartialJobEntity entity) {
+    public void delete (PartialJobStatusEntity entity) {
         repository.delete(entity);
     }
 }

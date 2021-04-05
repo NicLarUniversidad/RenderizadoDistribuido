@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FileServer {
+public class FileService {
 
     private final FileRepository repository;
 
     @Autowired
-    public FileServer(FileRepository repository) {
+    public FileService(FileRepository repository) {
         this.repository = repository;
     }
 

@@ -1,6 +1,6 @@
 package com.unlu.sdypp.renderizado.fachada.repositories;
 
-import com.unlu.sdypp.renderizado.fachada.models.PartialJobEntity;
+import com.unlu.sdypp.renderizado.fachada.models.PartialJobStatusEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -26,21 +26,21 @@ public class PartialJobStatusRepository {
         this.httpRepository = httpRepository;
     }
 
-    public List<PartialJobEntity> getFilesByReference(String reference) {
+    public List<PartialJobStatusEntity> getFilesByReference(String reference) {
         String url = fileServerUri + "/partial/job";
         HashMap<String, Object> params = new HashMap<>();
         params.put("reference", reference);
-        return (List<PartialJobEntity>) httpRepository.httpRequest(HttpMethod.GET, url, params, List.class);
+        return (List<PartialJobStatusEntity>) httpRepository.httpRequest(HttpMethod.GET, url, params, List.class);
     }
 
-    public PartialJobEntity save(PartialJobEntity entity) {
+    public PartialJobStatusEntity save(PartialJobStatusEntity entity) {
         String url = fileServerUri + "/partial/job";
         HashMap<String, Object> params = new HashMap<>();
         params.put("partial-job-status", entity);
-        return (PartialJobEntity) httpRepository.httpRequest(HttpMethod.PUT, url, params, PartialJobEntity.class);
+        return (PartialJobStatusEntity) httpRepository.httpRequest(HttpMethod.PUT, url, params, PartialJobStatusEntity.class);
     }
 
-    public void delete(PartialJobEntity entity) {
+    public void delete(PartialJobStatusEntity entity) {
         String url = fileServerUri + "/partial/job";
         HashMap<String, Object> params = new HashMap<>();
         params.put("partial-job-status", entity);
