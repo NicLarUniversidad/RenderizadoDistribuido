@@ -6,7 +6,7 @@ import dev.morphia.annotations.Property;
 
 import java.util.Date;
 
-public class PartialJobEntity {
+public class PartialJobStatusEntity {
 
     @Id
     private String id;
