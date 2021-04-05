@@ -30,3 +30,4 @@ FileServer/target/classes/application.properties
 FileServer/target/classes/application.properties
 LoadBalancer/src/test/resources/application.properties
 Worker/src/test/resources/application.properties
+FileServer/target/classes/application.properties
